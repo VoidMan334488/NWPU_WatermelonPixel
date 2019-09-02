@@ -1,3 +1,4 @@
+﻿<%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
 
@@ -6,7 +7,7 @@
 		<meta name="renderer" content="webkit">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title>网站后台管理模版</title>
+		<title>网站后台</title>
 		<link rel="stylesheet" type="text/css" href="../../static/admin/layui/css/layui.css" />
 		<link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css" />
 	</head>
@@ -16,18 +17,18 @@
 				<form class="layui-form column-content-detail">
 					<div class="layui-tab">
 						<ul class="layui-tab-title">
-						  <li class="layui-this">图片管理</li>
+						  <li class="layui-this">图片管理</li>
 					  </ul>
 						<div class="layui-tab-content">
 							<div class="layui-tab-item layui-show">
 								<div class="layui-form-item">
-									<label class="layui-form-label">标题：</label>
+									<label class="layui-form-label">标题：</label>
 									<div class="layui-input-block">
 										<input type="text" name="name" required lay-verify="required" placeholder="请输入图片名称" autocomplete="off" class="layui-input">
 									</div>
 								</div>
 								<div class="layui-form-item">
-									<label class="layui-form-label">模版：</label>
+									<label class="layui-form-label">模版：</label>
 									<div class="layui-input-block">
 										<select name="category" lay-verify="required">
 											<option value="">请选择模版</option>
@@ -39,7 +40,7 @@
 								<div class="layui-form-item">
 									<label class="layui-form-label">图像上传：</label>
 									<div class="layui-input-block">
-										<input type="file" name="file（可随便定义）" class="layui-upload-file">
+										<input type="file" name="file（可随便定义） class="layui-upload-file">
 									</div>
 								</div>
 								<div class="layui-form-item layui-form-text">
@@ -51,13 +52,13 @@
 							</div>
 							<div class="layui-tab-item">
 								<div class="layui-form-item">
-									<label class="layui-form-label">关键字：</label>
+									<label class="layui-form-label">关键字：</label>
 									<div class="layui-input-block">
 										<input type="text" name="laiyuan" placeholder="请输入关键字" autocomplete="off" class="layui-input">
 									</div>
 								</div>
 								<div class="layui-form-item layui-form-text">
-									<label class="layui-form-label">描述：</label>
+									<label class="layui-form-label">描述：</label>
 									<div class="layui-input-block">
 										<textarea placeholder="请输入内容" class="layui-textarea"></textarea>
 									</div>
@@ -103,25 +104,25 @@
 					element = layui.element(),
 					dialog = layui.dialog;
 
-				//获取当前iframe的name值
+
 				var iframeObj = $(window.frameElement).attr('name');
-				//创建一个编辑器
+		
 				var editIndex = layedit.build('LAY_demo_editor', {
-					tool: ['strong' //加粗
-						, 'italic' //斜体
-						, 'underline' //下划线
-						, 'del' //删除线
-						, '|' //分割线
-						, 'left' //左对齐
-						, 'center' //居中对齐
-						, 'right' //右对齐
-						, 'link' //超链接
-						, 'unlink' //清除链接
-						, 'image' //插入图片
+					tool: ['strong' 
+						, 'italic' 
+						, 'underline' 
+						, 'del' 
+						, '|' 
+						, 'left' 
+						, 'center' 
+						, 'right' 
+						, 'link' 
+						, 'unlink' 
+						, 'image' 
 					],
 					height: 100
 				})
-				//全选
+				//å¨é
 				form.on('checkbox(allChoose)', function(data) {
 					var child = $(data.elem).parents('table').find('tbody input[type="checkbox"]');
 					child.each(function(index, item) {
@@ -134,7 +135,7 @@
 				layui.upload({
 					url: '上传接口url',
 					success: function(res) {
-						console.log(res); //上传成功返回值，必须为json格式
+						console.log(res);
 					}
 				});
 			});

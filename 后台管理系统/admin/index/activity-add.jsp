@@ -1,97 +1,111 @@
-<%@ page contentType="text/html; charset=UTF-8" %>
+﻿<%@ page contentType="text/html; charset=UTF-8"%>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="renderer" content="webkit">
-  		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title>ç½ç«åå°ç®¡çæ¨¡ç</title>
-		<link rel="stylesheet" type="text/css" href="../../static/admin/layui/css/layui.css"/>
-		<link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css"/>
-	</head>
-	<body>
+<head>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>后台管理</title>
+<link rel="stylesheet" type="text/css"
+	href="../../static/admin/layui/css/layui.css" />
+<link rel="stylesheet" type="text/css"
+	href="../../static/admin/css/admin.css" />
+</head>
+<body>
 	<form class="layui-form column-content-detail">
-					<div class="layui-tab">
-						<ul class="layui-tab-title">
-							<li class="layui-this">æ´»å¨åå®¹</li>
-						</ul>
-						<div class="layui-tab-content">
-							<div class="layui-tab-item layui-show">
-								<div class="layui-form-item">
-									<label class="layui-form-label">æ´»å¨æ é¢ï¼</label>
-									<div class="layui-input-block">
-										<input type="text" name="name" required lay-verify="required" placeholder="è¯·è¾å¥æ´»å¨æ é¢" autocomplete="off" class="layui-input">
-									</div>
-								</div>
-								<div class="layui-form-item">
-									<label class="layui-form-label">åç±»æ ç®ï¼</label>
-									<div class="layui-input-block">
-										<select name="category" lay-verify="required">
-											<option value="">è¯·éæ©åç±»æ ç®</option>
-												<option value="1">å¬å¸æ°é»</option>
-												<option value="2">è¡ä¸æ°é»</option>
-										</select>
-									</div>
-								</div>
-								<div class="layui-form-item">
-									<label class="layui-form-label">å¾åä¸ä¼ ï¼</label>
-									<div class="layui-input-block">
-										<input type="file" name="fileï¼å¯éä¾¿å®ä¹ï¼" class="layui-upload-file">
-									</div>
-								</div>
-								<div class="layui-form-item">
-									<label class="layui-form-label">æ ç­¾ï¼</label>
-									<div class="layui-input-block">
-										<input type="checkbox" name="label[tj]" title="æ¨è" checked>
-										<input type="checkbox" name="label[zd]" title="ç½®é¡¶">
-										<input type="checkbox" name="label[hot]" title="ç­é¨">
-									</div>
-								</div>
-<div class="layui-form-item layui-form-text">
-  <label class="layui-form-label">æ´»å¨åå®¹ï¼</label>
-  <div class="layui-input-block">
-										<textarea class="layui-textarea layui-hide" name="content" lay-verify="content" id="LAY_demo_editor"></textarea>
-									</div>
-								</div>
-
-								<div class="layui-form-item">
-								  <label class="layui-form-label">åå»ºäººï¼</label>
-								  <div class="layui-input-block">
-										<input type="text" name="laiyuan" required lay-verify="required" placeholder="è¯·è¾å¥æç« æ¥æº" autocomplete="off" class="layui-input">
-									</div>
-								</div>
-<div class="layui-form-item">
-		  <label class="layui-form-label">ç¹å»æ°ï¼</label>
-									<div class="layui-input-block">
-										<input type="text" name="count" required lay-verify="required" placeholder="è¯·è¾å¥æç« ç¹å»æ°" autocomplete="off" class="layui-input" value="100">
-									</div>
-								</div>
-							</div>
-							<div class="layui-tab-item">
-								<div class="layui-form-item">
-									<label class="layui-form-label">å³é®å­ï¼</label>
-									<div class="layui-input-block">
-										<input type="text" name="laiyuan" placeholder="è¯·è¾å¥å³é®å­" autocomplete="off" class="layui-input">
-									</div>
-								</div>
-								<div class="layui-form-item layui-form-text">
-									<label class="layui-form-label">æè¿°ï¼</label>
-									<div class="layui-input-block">
-										<textarea placeholder="è¯·è¾å¥åå®¹" class="layui-textarea"></textarea>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="layui-form-item" style="padding-left: 10px;">
+		<div class="layui-tab">
+			<ul class="layui-tab-title">
+				<li class="layui-this">活动内容</li>
+			</ul>
+			<div class="layui-tab-content">
+				<div class="layui-tab-item layui-show">
+					<div class="layui-form-item">
+						<label class="layui-form-label">活动标题：</label>
 						<div class="layui-input-block">
-							<button class="layui-btn layui-btn-normal" lay-submit lay-filter="formDemo">ç«å³æäº¤</button>
-							<button type="reset" class="layui-btn layui-btn-primary">éç½®</button>
+							<input type="text" name="name" required lay-verify="required"
+								placeholder="请输入活动标题" autocomplete="off" class="layui-input">
 						</div>
 					</div>
-				</form>
-	<script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../../static/admin/js/common.js" type="text/javascript" charset="utf-8"></script>
+					<div class="layui-form-item">
+						<label class="layui-form-label">分类栏目：</label>
+						<div class="layui-input-block">
+							<select name="category" lay-verify="required">
+								<option value="">请选择分类栏目</option>
+								<option value="1">公司新闻</option>
+								<option value="2">行业新闻</option>
+							</select>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">图像上传：</label>
+						<div class="layui-input-block">
+							<input type="file" name="file（可随便定义）class="layui-upload-file">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">标签：</label>
+						<div class="layui-input-block">
+							<input type="checkbox" name="label[tj]" title="推荐" checked>
+							<input type="checkbox" name="label[zd]" title="置顶"> <input
+								type="checkbox" name="label[hot]" title="热门¨">
+						</div>
+					</div>
+					<div class="layui-form-item layui-form-text">
+						<label class="layui-form-label">活动内容：</label>
+						<div class="layui-input-block">
+							<textarea class="layui-textarea layui-hide" name="content"
+								lay-verify="content" id="LAY_demo_editor"></textarea>
+						</div>
+					</div>
+
+					<div class="layui-form-item">
+						<label class="layui-form-label">创建人：</label>
+						<div class="layui-input-block">
+							<input type="text" name="laiyuan" required lay-verify="required"
+								placeholder="请输入文章来源"  autocomplete="off"
+								class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">点击数：</label>
+						<div class="layui-input-block">
+							<input type="text" name="count" required lay-verify="required"
+								placeholder="请输入文章点击数" autocomplete="off"
+								class="layui-input" value="100">
+						</div>
+					</div>
+				</div>
+				<div class="layui-tab-item">
+					<div class="layui-form-item">
+						<label class="layui-form-label">关键字：</label>
+						<div class="layui-input-block">
+							<input type="text" name="laiyuan"
+								placeholder="请输入关键字"autocomplete="off"
+								class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item layui-form-text">
+						<label class="layui-form-label">描述：</label>
+						<div class="layui-input-block">
+							<textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="layui-form-item" style="padding-left: 10px;">
+			<div class="layui-input-block">
+				<button class="layui-btn layui-btn-normal" lay-submit
+					lay-filter="formDemo">立即提交</button>
+				<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+			</div>
+		</div>
+	</form>
+	<script src="../../static/admin/layui/layui.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../static/admin/js/common.js" type="text/javascript"
+		charset="utf-8"></script>
 	<script>
 		layui.use(['form', 'jquery', 'laydate', 'layer', 'laypage', 'dialog', 'common', 'tool', 'element', 'upload', 'layedit'], function() {
 				var form = layui.form(),
@@ -105,25 +119,25 @@
 					element = layui.element(),
 					dialog = layui.dialog;
 
-				//è·åå½åiframeçnameå¼
+				//获取当前iframe的name值
 				var iframeObj = $(window.frameElement).attr('name');
-				//åå»ºä¸ä¸ªç¼è¾å¨
+				//创建一个编辑器
 				var editIndex = layedit.build('LAY_demo_editor', {
-					tool: ['strong' //å ç²
-						, 'italic' //æä½
-						, 'underline' //ä¸åçº¿
-						, 'del' //å é¤çº¿
-						, '|' //åå²çº¿
-						, 'left' //å·¦å¯¹é½
-						, 'center' //å±ä¸­å¯¹é½
-						, 'right' //å³å¯¹é½
-						, 'link' //è¶é¾æ¥
-						, 'unlink' //æ¸é¤é¾æ¥
-						, 'image' //æå¥å¾ç
+					tool: ['strong'  //加粗
+						, 'italic'//斜体
+						, 'underline' //下划线
+						, 'del'//删除线
+						, '|'  //分割线
+						, 'left' //左对齐
+						, 'center' //居中对齐
+						, 'right' //右对齐
+						, 'link' //超链接
+						, 'unlink'//清除链接
+						, 'image' //插入图片
 					],
 					height: 100
 				})
-				//å¨é
+				//全选
 				form.on('checkbox(allChoose)', function(data) {
 					var child = $(data.elem).parents('table').find('tbody input[type="checkbox"]');
 					child.each(function(index, item) {
@@ -134,12 +148,12 @@
 				form.render();
 
 				layui.upload({
-					url: 'ä¸ä¼ æ¥å£url',
+					url:  '上传接口url',
 					success: function(res) {
-						console.log(res); //ä¸ä¼ æåè¿åå¼ï¼å¿é¡»ä¸ºjsonæ ¼å¼
+						console.log(res); //上传成功返回值，必须为json格式
 					}
 				});
 			});
 	</script>
-	</body>
+</body>
 </html>
